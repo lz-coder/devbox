@@ -6,7 +6,7 @@ LABEL VERSION=0.1 \
       AUTHOR=lzcoder \
       EMAIL=lzcoder@proton.me
 
-RUN dnf install --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' \
+RUN dnf install -y --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' \
     --setopt='terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc' terra-release
 
 RUN dnf upgrade \
